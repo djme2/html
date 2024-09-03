@@ -1,0 +1,30 @@
+$couleurBase: darkblue;
+$taille: 20px;
+
+ul{
+    list-style: none;
+}
+// $cpt: 1;
+// @while $cpt <= 5 {
+//     li:nth-child(#{$cpt}){
+//         background-color: lighten($couleurBase, $cpt * 12%) ;
+//         font-size: $cpt * $taille;
+//     }
+//     $cpt: $cpt + 1;
+// }
+
+// $cpt: 1;
+// @while $cpt <= 5 {
+//     #elt-#{$cpt}{
+//         background-color: lighten($couleurBase, $cpt * 12%) ;
+//         font-size: $cpt * $taille;
+//     }
+//     $cpt: $cpt + 1;
+// }
+
+@for $cpt from 1 through 5 {
+    li:nth-child(#{$cpt}){
+        background-color: lighten($couleurBase, $cpt * 12%) ;
+        font-size: $cpt * $taille;
+    }
+}
